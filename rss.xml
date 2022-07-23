@@ -4,9 +4,15 @@
         <title></title>
         <link>undefined</link>
         <description>undefined</description>
-        <lastBuildDate>Sat, 23 Jul 2022 09:32:21 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 23 Jul 2022 09:34:41 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Joplin Pages Publisher</generator>
+        <item>
+            <title><![CDATA[Fig. 1 物质及基团结构图]]></title>
+            <guid>a0078d2aa255402fb9496f6d706e34a5</guid>
+            <pubDate>Thu, 21 Jul 2022 20:16:09 GMT</pubDate>
+            <content:encoded><![CDATA[<img src="/_resources/45c3b8ce80e543d48e0d58d27deb8073.png" />l]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[1. Welcome to Joplin!]]></title>
             <guid>70e3086d06824342b3d4757cdd464348</guid>
