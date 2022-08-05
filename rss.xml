@@ -4,82 +4,16 @@
         <title></title>
         <link>undefined</link>
         <description>undefined</description>
-        <lastBuildDate>Sat, 23 Jul 2022 09:43:22 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 05 Aug 2022 15:20:50 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Joplin Pages Publisher</generator>
         <item>
-            <title><![CDATA[对象]]></title>
-            <guid>2dea4cf321d7400da7e53f3f8fa9c2cc</guid>
-            <pubDate>Sat, 23 Jul 2022 09:37:04 GMT</pubDate>
-            <content:encoded><![CDATA[<p><img src="/_resources/8e7d413b6a7f4620bb9eaa23474f80a1.jpg" /></p>
-<p>G1.jpg</p>
-<p>G1.jpg</p>
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Fig. 1 物质及基团结构图]]></title>
-            <guid>a0078d2aa255402fb9496f6d706e34a5</guid>
-            <pubDate>Thu, 21 Jul 2022 20:16:09 GMT</pubDate>
-            <content:encoded><![CDATA[<img src="/_resources/45c3b8ce80e543d48e0d58d27deb8073.png" />l]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[1. Welcome to Joplin!]]></title>
-            <guid>70e3086d06824342b3d4757cdd464348</guid>
-            <pubDate>Thu, 21 Jul 2022 18:07:47 GMT</pubDate>
-            <content:encoded><![CDATA[<h1 id="welcome-to-joplin">Welcome to Joplin!</h1>
-<p>Joplin is a free, open source note taking and to-do application, which helps you write and organise your notes, and synchronise them between your devices. The notes are searchable, can be copied, tagged and modified either from the application directly or from your own text editor. The notes are in <a title="https://joplinapp.org/help/#markdown" href="https://joplinapp.org/help/#markdown">Markdown format</a>. Joplin is available as a <strong>desktop</strong>, <strong>mobile</strong> and <strong>terminal</strong> application.</p>
-<p>The notes in this notebook give an overview of what Joplin can do and how to use it. In general, the three applications share roughly the same functionalities; any differences will be clearly indicated.</p>
-<p><img src="/_resources/71096e74175a49faaa28bc02f2c4392d.png" /></p>
-<h2 id="joplin-is-divided-into-three-parts">Joplin is divided into three parts</h2>
-<p>Joplin has three main columns:</p>
-<ul>
-<li>
-<p><strong>Sidebar</strong> contains the list of your notebooks and tags, as well as the synchronisation status.</p>
-</li>
-<li>
-<p><strong>Note List</strong> contains the current list of notes - either the notes in the currently selected notebook, the notes in the currently selected tag, or search results.</p>
-</li>
-<li>
-<p><strong>Note Editor</strong> is the place where you write your notes. There is a <strong>Rich Text editor</strong> and a <strong>Markdown editor</strong> - click on the <strong>Toggle editor</strong> button in the top right hand corner to switch between both! You may also use an <a title="https://joplinapp.org/help/#external-text-editor" href="https://joplinapp.org/help/#external-text-editor">external editor</a> to edit notes. For example you can use Typora as an external editor and it will display the note as well as any embedded images.</p>
-</li>
-</ul>
-<h2 id="writing-notes-in-markdown">Writing notes in Markdown</h2>
-<p>Markdown is a lightweight markup language with plain text formatting syntax. Joplin supports a <a title="https://joplinapp.org/markdown/" href="https://joplinapp.org/markdown/">Github-flavoured Markdown syntax</a> with a few variations and additions.</p>
-<p>In general, while Markdown is a markup language, it is meant to be human readable, even without being rendered. This is a simple example (you can see how it looks in the viewer panel):</p>
-<hr />
-<h1 id="heading">Heading</h1>
-<h2 id="sub-heading">Sub-heading</h2>
-<p>Paragraphs are separated by a blank line. Text attributes <em>italic</em>, <strong>bold</strong> and <code>monospace</code> are supported. You can create bullet lists:</p>
-<ul>
-<li>apples</li>
-<li>oranges</li>
-<li>pears</li>
-</ul>
-<p>Or numbered lists:</p>
-<ol>
-<li>wash</li>
-<li>rinse</li>
-<li>repeat</li>
+            <title><![CDATA[推特好友]]></title>
+            <guid>3351c2aa2e70494f9355a4640dc21a36</guid>
+            <pubDate>Fri, 05 Aug 2022 15:17:22 GMT</pubDate>
+            <content:encoded><![CDATA[<ol>
+<li>@back_XiaoDiDi</li>
 </ol>
-<p>This is a <a title="https://joplinapp.org" href="https://joplinapp.org">link</a> and, finally, below is a horizontal rule:</p>
-<hr />
-<p>A lot more is possible including adding code samples, math formulae or checkbox lists - see the <a title="https://joplinapp.org/help/#markdown" href="https://joplinapp.org/help/#markdown">Markdown documentation</a> for more information.</p>
-<h2 id="organising-your-notes">Organising your notes</h2>
-<h3 id="with-notebooks">With notebooks</h3>
-<p>Joplin notes are organised into a tree of notebooks and sub-notebooks.</p>
-<ul>
-<li>On <strong>desktop</strong>, you can create a notebook by clicking on New Notebook, then you can drag and drop them into other notebooks to organise them as you wish.</li>
-<li>On <strong>mobile</strong>, press the “+” icon and select “New notebook”.</li>
-<li>On <strong>terminal</strong>, press <code>:mn</code></li>
-</ul>
-<p><img src="/_resources/c0b34ef5874547aab126bb3a8042267d.png" /></p>
-<h3 id="with-tags">With tags</h3>
-<p>The second way to organise your notes is using tags:</p>
-<ul>
-<li>On <strong>desktop</strong>, right-click on any note in the Note List, and select “Edit tags”. You can then add the tags, separating them by commas.</li>
-<li>On <strong>mobile</strong>, open the note and press the “⋮” button and select “Tags”.</li>
-<li>On <strong>terminal</strong>, type <code>:help tag</code> for the available commands.</li>
-</ul>
 ]]></content:encoded>
         </item>
     </channel>
