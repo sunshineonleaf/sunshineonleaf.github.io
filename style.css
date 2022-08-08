@@ -1,0 +1,43 @@
+body {
+  background: #222;
+}
+.container {
+  min-width: 320px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.heart {
+  position: relative;
+  left: 50%;
+  top: 150px;
+  width: auto;
+  transform: translateX(-50%);
+  display: inline-block;
+  z-index: 2;
+}
+.heart:hover {
+  cursor: pointer;
+}
+.heart .shape-heart {
+  transition: fill 0.25s ease-in;
+}
+.heart.active .shape-heart {
+  fill: #ff4136;
+}
+svg {
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+.clickme {
+  position: relative;
+  left: 70%;
+  top: 130px;
+  transform: scale(4);
+  z-index: 1;
+}
+@media screen and (min-width: 480px) {
+  .clickme {
+    left: 60%;
+  }
+}
