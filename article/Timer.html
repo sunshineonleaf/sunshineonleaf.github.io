@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="/_assets/main.css" />
+
+    <title>计时器 - taotao.jop</title>
+  </head>
+  <body>
+    <div class="main">
+      <nav class="navigation">
+        <a href="/">taotao.jop</a>
+      </nav>
+      <article>
+        <header>
+          <h1 class="article-title">计时器</h1>
+          <div class="article-info">
+            <div>
+              <span
+                >Created At：<time datetime="1663415967261"
+                  >2022-09-17 13:59</time
+                ></span
+              >
+              <span
+                >Updated At：<time datetime="1663450747104"
+                  >2022-09-17 23:39</time
+                ></span
+              >
+            </div>
+            
+          </div>
+        </header>
+        <div class="article-content markdown-body"><p>&lt;!DOCTYPE html 二次开发：占涛涛，源码：Daniel Hearn&gt;</p>
+<p>&lt;html lang=“en” &gt;</p>
+<p>&lt;head&gt;</p>
+<p>&lt;meta http-equiv=“Content-Type” content=“text/html; charset=utf-8”&gt;</p>
+<p>&lt;meta name=“viewport” content=“width=device-width, initial-scale=1”&gt;</p>
+<p>&lt;title&gt;计时器&lt;/title&gt;</p>
+<p>&lt;style&gt;</p>
+<p>.note {</p>
+<p>font-family: “Great Vibes”, cursive;</p>
+<p>font-size: 1rem;</p>
+<p>position: absolute;</p>
+<p>bottom: 10px;</p>
+<p>right: 10px;</p>
+<p>color: black;</p>
+<p>letter-spacing: 2px;</p>
+<p>text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);</p>
+<p>}</p>
+<p>body{</p>
+<p>margin:0;</p>
+<p>color:#444;</p>
+<p>background:#ecf0f1;</p>
+<p>font:300 18px/18px Roboto, sans-serif;</p>
+<p>}</p>
+<p>*,:after,:before{box-sizing:border-box}</p>
+<p>.pull-left{float:left}</p>
+<p>.pull-right{float:right}</p>
+<p>.clearfix:after,.clearfix:before{content:’’;display:table}</p>
+<p>.clearfix:after{clear:both;display:block}</p>
+<p>.clock:before,</p>
+<p>.count:after{</p>
+<p>content:’’;</p>
+<p>position:absolute;</p>
+<p>}</p>
+<p>.clock-wrap{</p>
+<p>margin:auto;</p>
+<p>width:400px;</p>
+<p>height:400px;</p>
+<p>margin-top:100px;</p>
+<p>position:relative;</p>
+<p>border-radius:50px;</p>
+<p>background-color:#fff;</p>
+<p>box-shadow:0 0 15px rgba(0,0,0,.15);</p>
+<p>}</p>
+<p>.clock{</p>
+<p>top:50%;</p>
+<p>left:50%;</p>
+<p>width:270px;</p>
+<p>height:270px;</p>
+<p>border-radius:50%;</p>
+<p>position:absolute;</p>
+<p>margin-top:-135px;</p>
+<p>margin-left:-135px;</p>
+<p>background-color:#A2DBFA;</p>
+<p>}</p>
+<p>.clock:before{</p>
+<p>top:50%;</p>
+<p>left:50%;</p>
+<p>width:180px;</p>
+<p>height:180px;</p>
+<p>margin-top:-90px;</p>
+<p>margin-left:-90px;</p>
+<p>border-radius:inherit;</p>
+<p>background-color: #39A2DB;</p>
+<p>box-shadow:0 0 5px rgba(0,0,0,.15), 0 0 3px rgba(255,255,255,.75) inset;</p>
+<p>/*border:1px solid rgba(255,255,255,.1);*/</p>
+<p>}</p>
+<p>.count{</p>
+<p>width:100%;</p>
+<p>color:#fff;</p>
+<p>height:100%;</p>
+<p>padding:100px;</p>
+<p>font-size:55px;</p>
+<p>font-weight:500;</p>
+<p>line-height:50px;</p>
+<p>position:absolute;</p>
+<p>text-align:center;</p>
+<p>}</p>
+<p>.count:after{</p>
+<p>width:100%;</p>
+<p>display:block;</p>
+<p>font-size:20px;</p>
+<p>font-weight:300;</p>
+<p>line-height:18px;</p>
+<p>text-align:center;</p>
+<p>position:relative;</p>
+<p>}</p>
+<p>.count.sec:after{content:‘sec’}</p>
+<p>.count.min:after{content:‘min’}</p>
+<p>.action{</p>
+<p>margin:auto;</p>
+<p>max-width:200px;</p>
+<p>}</p>
+<p>.action .input{</p>
+<p>margin-top:30px;</p>
+<p>position:relative;</p>
+<p>}</p>
+<p>.action .input-num{</p>
+<p>width:100%;</p>
+<p>border:none;</p>
+<p>padding:12px;</p>
+<p>border-radius:60px;</p>
+<p>}</p>
+<p>.action .input-btn{</p>
+<p>top:0;</p>
+<p>right:0;</p>
+<p>color:#fff;</p>
+<p>border:none;</p>
+<p>border:none;</p>
+<p>padding:12px;</p>
+<p>position:absolute;</p>
+<p>border-radius:60px;</p>
+<p>background-color:#39A2DB;</p>
+<p>text-transform:uppercase;</p>
+<p>}</p>
+<p>.tbl{display:table;width:100%}</p>
+<p>.tbl .col{display:table-cell}</p>
+<p>&lt;/style&gt;</p>
+<p>&lt;/head&gt;</p>
+<p>&lt;body&gt;</p>
+<p>&lt;!-- partial:index.partial.html --&gt;</p>
+<p>&lt;div class=“clock-wrap”&gt;</p>
+<p>&lt;div class=“clock pro-0”&gt;</p>
+<p>&lt;span class=“count”&gt;0&lt;/span&gt;</p>
+<p>&lt;/div&gt;</p>
+<p>&lt;/div&gt;</p>
+<p>&lt;div class=“action”&gt;</p>
+<p>&lt;div class=“input”&gt;</p>
+<p>&lt;input class=“input-num” type=“number” min=“1” placeholder=“Enter Minute”&gt;&lt;input data-action=“start” class=“input-btn” type=“button” value=“Start”&gt;</p>
+<p>&lt;/div&gt;</p>
+<p>&lt;/div&gt;</p>
+<p>&lt;!-- partial --&gt;</p>
+</div>
+      </article>
+    </div>
+  </body>
+</html>
