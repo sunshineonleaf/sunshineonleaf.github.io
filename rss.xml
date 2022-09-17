@@ -4,83 +4,82 @@
         <title></title>
         <link>undefined</link>
         <description>undefined</description>
-        <lastBuildDate>Sat, 17 Sep 2022 10:51:27 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 17 Sep 2022 11:36:24 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Joplin Pages Publisher</generator>
         <item>
             <title><![CDATA[科研网站推荐——占涛涛]]></title>
             <guid>0b51b7005b0a41088e2dff92e7834db8</guid>
             <pubDate>Sat, 17 Sep 2022 05:19:25 GMT</pubDate>
-            <content:encoded><![CDATA[<p><strong>网站功能及地址</strong></p>
-<table>
-<thead>
-<tr>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>期刊影响因子及选刊助手：<a title="https://www.home-for-researchers.com/static/index.html#/" href="https://www.home-for-researchers.com/static/index.html#/">https://www.home-for-researchers.com/static/index.html#/</a></td>
-</tr>
-<tr>
-<td>任意内容搜全文：<a title="https://www.mendeley.com/search/" href="https://www.mendeley.com/search/">https://www.mendeley.com/search/</a></td>
-</tr>
-<tr>
-<td>无广告客制化搜索引擎：<a title="https://searx.be/" href="https://searx.be/">https://searx.be/</a></td>
-</tr>
-<tr>
-<td>免费开源物性方程代码：<a title="https://github.com/" href="https://github.com/">https://github.com/</a></td>
-</tr>
-<tr>
-<td>英文论文改写去重：<a title="https://www.gingersoftware.com/ginger-writer" href="https://www.gingersoftware.com/ginger-writer">https://www.gingersoftware.com/ginger-writer</a></td>
-</tr>
-<tr>
-<td>化学物质基本信息：<a title="https://china.guidechem.com/dict/" href="https://china.guidechem.com/dict/">https://china.guidechem.com/dict/</a></td>
-</tr>
-<tr>
-<td>Matlab调用refprop官方文档：<a title="https://trc.nist.gov/refprop/LINKING/Linking.htm#PythonApplications" href="https://trc.nist.gov/refprop/LINKING/Linking.htm#PythonApplications">https://trc.nist.gov/refprop/LINKING/Linking.htm#PythonApplications</a></td>
-</tr>
-<tr>
-<td>英文电子书免费下载：<a title="https://libgen.fun/" href="https://libgen.fun/">https://libgen.fun/</a></td>
-</tr>
-<tr>
-<td>学术网站导航：<a title="https://site.sciping.com/" href="https://site.sciping.com/">https://site.sciping.com/</a></td>
-</tr>
-<tr>
-<td>何老师文章主页：<a title="https://www.researchgate.net/profile/Maogang-He" href="https://www.researchgate.net/profile/Maogang-He">https://www.researchgate.net/profile/Maogang-He</a></td>
-</tr>
-<tr>
-<td>多设备自动同步云笔记：<a title="https://joplinapp.org/" href="https://joplinapp.org/">https://joplinapp.org/</a></td>
-</tr>
-<tr>
-<td>Python编辑器：<a title="https://thonny.org/" href="https://thonny.org/">https://thonny.org/</a></td>
-</tr>
-<tr>
-<td>能快速提升科研效率的桌面工具：<a title="https://www.u.tools/" href="https://www.u.tools/">https://www.u.tools/</a></td>
-</tr>
-<tr>
-<td>COMSOL有限元仿真案例：<a title="https://cn.comsol.com/model/free-surface-mixer-16973" href="https://cn.comsol.com/model/free-surface-mixer-16973">https://cn.comsol.com/model/free-surface-mixer-16973</a></td>
-</tr>
-<tr>
-<td>SCI-hub学术导航：<a title="https://www.scihub.net.cn/sci-hub/" href="https://www.scihub.net.cn/sci-hub/">https://www.scihub.net.cn/sci-hub/</a></td>
-</tr>
-<tr>
-<td>校园VPN（论如何在家科研）：<a title="http://vpn.xjtu.edu.cn/" href="http://vpn.xjtu.edu.cn/">http://vpn.xjtu.edu.cn/</a></td>
-</tr>
-<tr>
-<td>大型文字科普网站：<a title="https://www.zhihu.com/" href="https://www.zhihu.com/">https://www.zhihu.com/</a></td>
-</tr>
-<tr>
-<td>大型视频科普网站：<a title="https://www.bilibili.com/" href="https://www.bilibili.com/">https://www.bilibili.com/</a></td>
-</tr>
-<tr>
-<td>资料、软件、书籍和视频等免费快速下载VPN6网站：<a title="https://byr.pt/" href="https://byr.pt/">https://byr.pt/</a></td>
-</tr>
-<tr>
-<td>在线多设备同步思维导图：<a title="https://xmind.works/#/" href="https://xmind.works/#/">https://xmind.works/#/</a></td>
-</tr>
-</tbody>
-</table>
+            <content:encoded><![CDATA[<h1 id="网站功能及地址"><strong>网站功能及地址</strong></h1>
+<h2 id="一-搜索"><strong>一、搜索</strong></h2>
+<ol>
+<li>
+<h3 id="无广告客制化搜索引擎httpssearxbe">无广告客制化搜索引擎：<a title="https://searx.be/" href="https://searx.be/">https://searx.be/</a></h3>
+</li>
+<li>
+<h3 id="期刊影响因子及选刊助手httpswwwhome-for-researcherscomstaticindexhtml">期刊影响因子及选刊助手：<a title="https://www.home-for-researchers.com/static/index.html#/" href="https://www.home-for-researchers.com/static/index.html#/">https://www.home-for-researchers.com/static/index.html#/</a></h3>
+</li>
+<li>
+<h3 id="任意内容搜全文httpswwwmendeleycomsearch">任意内容搜全文：<a title="https://www.mendeley.com/search/" href="https://www.mendeley.com/search/">https://www.mendeley.com/search/</a></h3>
+</li>
+<li>
+<h3 id="英文论文改写去重httpswwwgingersoftwarecomginger-writer">英文论文改写去重：<a title="https://www.gingersoftware.com/ginger-writer" href="https://www.gingersoftware.com/ginger-writer">https://www.gingersoftware.com/ginger-writer</a></h3>
+</li>
+<li>
+<h3 id="化学物质基本信息httpschinaguidechemcomdict">化学物质基本信息：<a title="https://china.guidechem.com/dict/" href="https://china.guidechem.com/dict/">https://china.guidechem.com/dict/</a></h3>
+</li>
+<li>
+<h3 id="英文电子书免费下载httpslibgenfun">英文电子书免费下载：<a title="https://libgen.fun/" href="https://libgen.fun/">https://libgen.fun/</a></h3>
+</li>
+<li>
+<h3 id="学术网站导航httpssitescipingcom">学术网站导航：<a title="https://site.sciping.com/" href="https://site.sciping.com/">https://site.sciping.com/</a></h3>
+</li>
+<li>
+<h3 id="何老师文章主页httpswwwresearchgatenetprofilemaogang-he">何老师文章主页：<a title="https://www.researchgate.net/profile/Maogang-He" href="https://www.researchgate.net/profile/Maogang-He">https://www.researchgate.net/profile/Maogang-He</a></h3>
+</li>
+<li>
+<h3 id="sci-hub学术导航httpswwwscihubnetcnsci-hub">SCI-hub学术导航：<a title="https://www.scihub.net.cn/sci-hub/" href="https://www.scihub.net.cn/sci-hub/">https://www.scihub.net.cn/sci-hub/</a></h3>
+</li>
+<li>
+<h3 id="校园vpn论如何在家科研httpvpnxjtueducn">校园VPN（论如何在家科研）：<a title="http://vpn.xjtu.edu.cn/" href="http://vpn.xjtu.edu.cn/">http://vpn.xjtu.edu.cn/</a></h3>
+</li>
+<li>
+<h3 id="大型文字科普网站httpswwwzhihucom">大型文字科普网站：<a title="https://www.zhihu.com/" href="https://www.zhihu.com/">https://www.zhihu.com/</a></h3>
+</li>
+<li>
+<h3 id="大型视频科普网站httpswwwbilibilicom">大型视频科普网站：<a title="https://www.bilibili.com/" href="https://www.bilibili.com/">https://www.bilibili.com/</a></h3>
+</li>
+<li>
+<h3 id="资料-软件-书籍和视频等免费快速下载vpn6网站httpsbyrpt">资料、软件、书籍和视频等免费快速下载VPN6网站：<a title="https://byr.pt/" href="https://byr.pt/">https://byr.pt/</a></h3>
+</li>
+</ol>
+<h2 id="二-应用">二、应用</h2>
+<ol>
+<li>
+<h3 id="免费开源物性方程代码httpsgithubcomcoolpropcoolprop">免费开源物性方程代码：<a title="https://github.com/" href="https://github.com/">https://github.com/CoolProp/CoolProp</a></h3>
+</li>
+<li>
+<h3 id="matlab调用refprop官方文档httpstrcnistgovrefproplinkinglinkinghtmpythonapplications">Matlab调用refprop官方文档：<a title="https://trc.nist.gov/refprop/LINKING/Linking.htm#PythonApplications" href="https://trc.nist.gov/refprop/LINKING/Linking.htm#PythonApplications">https://trc.nist.gov/refprop/LINKING/Linking.htm#PythonApplications</a></h3>
+</li>
+<li>
+<h3 id="多设备自动同步云笔记httpsjoplinapporg">多设备自动同步云笔记：<a title="https://joplinapp.org/" href="https://joplinapp.org/">https://joplinapp.org/</a></h3>
+</li>
+<li>
+<h3 id="python编辑器httpsthonnyorg">Python编辑器：<a title="https://thonny.org/" href="https://thonny.org/">https://thonny.org/</a></h3>
+</li>
+<li>
+<h3 id="能快速提升科研效率的桌面工具httpswwwutools">能快速提升科研效率的桌面工具：<a title="https://www.u.tools/" href="https://www.u.tools/">https://www.u.tools/</a></h3>
+</li>
+<li>
+<h3 id="comsol有限元仿真案例httpscncomsolcommodelfree-surface-mixer-16973">COMSOL有限元仿真案例：<a title="https://cn.comsol.com/model/free-surface-mixer-16973" href="https://cn.comsol.com/model/free-surface-mixer-16973">https://cn.comsol.com/model/free-surface-mixer-16973</a></h3>
+</li>
+<li>
+<h3 id="在线多设备同步思维导图httpsxmindworks">在线多设备同步思维导图：<a title="https://xmind.works/#/" href="https://xmind.works/#/">https://xmind.works/#/</a></h3>
+</li>
+</ol>
+<p><mark>持续更新中~</mark></p>
+<hr />
 <blockquote>
 <img src="/_resources/36326a4c7ecd48859d8fa454777062bb.JPG" alt="DSC_2443.JPG" width="801" height="531" class="jop-noMdConv" /></blockquote>
 ]]></content:encoded>
