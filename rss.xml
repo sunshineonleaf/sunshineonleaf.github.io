@@ -4,7 +4,7 @@
         <title></title>
         <link>undefined</link>
         <description>undefined</description>
-        <lastBuildDate>Sat, 17 Sep 2022 21:19:21 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 17 Sep 2022 21:32:06 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Joplin Pages Publisher</generator>
         <item>
@@ -68,6 +68,9 @@
 </ol>
 <h2 id="二-应用wrench"><strong>二、应用</strong>🔧</h2>
 <ol>
+<li>
+<h3 id="在线物性计算httpswebbooknistgovchemistryfluid">在线物性计算：<a title="https://webbook.nist.gov/chemistry/fluid/" href="https://webbook.nist.gov/chemistry/fluid/">https://webbook.nist.gov/chemistry/fluid/</a></h3>
+</li>
 <li>
 <h3 id="免费开源物性方程代码httpsgithubcomcoolpropcoolprop">免费开源物性方程代码：<a title="https://github.com/" href="https://github.com/">https://github.com/CoolProp/CoolProp</a></h3>
 </li>
