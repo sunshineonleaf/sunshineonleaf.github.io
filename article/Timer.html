@@ -1,214 +1,170 @@
-<!DOCTYPE html 二次开发：占涛涛，源码：Daniel Hearn>
-<html lang="en" >
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>计时器</title>
-<style>
-.note {
-	font-family: "Great Vibes", cursive;
-	font-size: 1rem;
-	position: absolute;
-	bottom: 10px;
-	right: 10px;
-	color: black;
-	letter-spacing: 2px;
-	text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);
-}
-body{
-	margin:0;
-	color:#444;
-	background:#ecf0f1;
-	font:300 18px/18px Roboto, sans-serif;
-}
-*,:after,:before{box-sizing:border-box}
-.pull-left{float:left}
-.pull-right{float:right}
-.clearfix:after,.clearfix:before{content:'';display:table}
-.clearfix:after{clear:both;display:block}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="/_assets/main.css" />
 
-.clock:before,
-.count:after{
-	content:'';
-	position:absolute;
-}
-.clock-wrap{
-	margin:auto;
-	width:400px;
-	height:400px;
-	margin-top:100px;
-	position:relative;
-	border-radius:50px;
-	background-color:#fff;
-	box-shadow:0 0 15px rgba(0,0,0,.15);
-}
-.clock{
-	top:50%;
-	left:50%;
-	width:270px;
-	height:270px;
-	border-radius:50%;
-	position:absolute;
-	margin-top:-135px;
-	margin-left:-135px;
-	background-color:#A2DBFA;
-}
-.clock:before{
-	top:50%;
-	left:50%;
-	width:180px;
-	height:180px;
-	margin-top:-90px;
-	margin-left:-90px;
-	border-radius:inherit;
-	background-color: #39A2DB;
-	box-shadow:0 0 5px rgba(0,0,0,.15), 0 0 3px rgba(255,255,255,.75) inset;
-	/*border:1px solid rgba(255,255,255,.1);*/
-}
-.count{
-	width:100%;
-	color:#fff;
-	height:100%;
-	padding:100px;
-	font-size:55px;
-	font-weight:500;
-	line-height:50px;
-	position:absolute;
-	text-align:center;
-}
-.count:after{
-	width:100%;
-	display:block;
-	font-size:20px;
-	font-weight:300;
-	line-height:18px;
-	text-align:center;
-	position:relative;
-}
-.count.sec:after{content:'sec'}
-.count.min:after{content:'min'}
-.action{
-	margin:auto;
-	max-width:200px;
-}
-.action .input{
-	margin-top:30px;
-	position:relative;
-}
-.action .input-num{
-	width:100%;
-	border:none;
-	padding:12px;
-	border-radius:60px;
-}
-.action .input-btn{
-	top:0;
-	right:0;
-	color:#fff;
-	border:none;
-	border:none;
-	padding:12px;
-	position:absolute;
-	border-radius:60px;
-	background-color:#39A2DB;
-	text-transform:uppercase;
-}
-.tbl{display:table;width:100%}
-.tbl .col{display:table-cell}
-</style>
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<div class="clock-wrap">
-	<div class="clock pro-0">
-		<span class="count">0</span>
-	</div>
+    <title>计时器 - taotao.jop</title>
+  </head>
+  <body>
+    <div class="main">
+      <nav class="navigation">
+        <a href="/">taotao.jop</a>
+      </nav>
+      <article>
+        <header>
+          <h1 class="article-title">计时器</h1>
+          <div class="article-info">
+            <div>
+              <span
+                >Created At：<time datetime="1663415967261"
+                  >2022-09-17 13:59</time
+                ></span
+              >
+              <span
+                >Updated At：<time datetime="1663450747104"
+                  >2022-09-17 23:39</time
+                ></span
+              >
+            </div>
+            
+          </div>
+        </header>
+        <div class="article-content markdown-body"><p>&lt;!DOCTYPE html 二次开发：占涛涛，源码：Daniel Hearn&gt;</p>
+<p>&lt;html lang=“en” &gt;</p>
+<p>&lt;head&gt;</p>
+<p>&lt;meta http-equiv=“Content-Type” content=“text/html; charset=utf-8”&gt;</p>
+<p>&lt;meta name=“viewport” content=“width=device-width, initial-scale=1”&gt;</p>
+<p>&lt;title&gt;计时器&lt;/title&gt;</p>
+<p>&lt;style&gt;</p>
+<p>.note {</p>
+<p>font-family: “Great Vibes”, cursive;</p>
+<p>font-size: 1rem;</p>
+<p>position: absolute;</p>
+<p>bottom: 10px;</p>
+<p>right: 10px;</p>
+<p>color: black;</p>
+<p>letter-spacing: 2px;</p>
+<p>text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);</p>
+<p>}</p>
+<p>body{</p>
+<p>margin:0;</p>
+<p>color:#444;</p>
+<p>background:#ecf0f1;</p>
+<p>font:300 18px/18px Roboto, sans-serif;</p>
+<p>}</p>
+<p>*,:after,:before{box-sizing:border-box}</p>
+<p>.pull-left{float:left}</p>
+<p>.pull-right{float:right}</p>
+<p>.clearfix:after,.clearfix:before{content:’’;display:table}</p>
+<p>.clearfix:after{clear:both;display:block}</p>
+<p>.clock:before,</p>
+<p>.count:after{</p>
+<p>content:’’;</p>
+<p>position:absolute;</p>
+<p>}</p>
+<p>.clock-wrap{</p>
+<p>margin:auto;</p>
+<p>width:400px;</p>
+<p>height:400px;</p>
+<p>margin-top:100px;</p>
+<p>position:relative;</p>
+<p>border-radius:50px;</p>
+<p>background-color:#fff;</p>
+<p>box-shadow:0 0 15px rgba(0,0,0,.15);</p>
+<p>}</p>
+<p>.clock{</p>
+<p>top:50%;</p>
+<p>left:50%;</p>
+<p>width:270px;</p>
+<p>height:270px;</p>
+<p>border-radius:50%;</p>
+<p>position:absolute;</p>
+<p>margin-top:-135px;</p>
+<p>margin-left:-135px;</p>
+<p>background-color:#A2DBFA;</p>
+<p>}</p>
+<p>.clock:before{</p>
+<p>top:50%;</p>
+<p>left:50%;</p>
+<p>width:180px;</p>
+<p>height:180px;</p>
+<p>margin-top:-90px;</p>
+<p>margin-left:-90px;</p>
+<p>border-radius:inherit;</p>
+<p>background-color: #39A2DB;</p>
+<p>box-shadow:0 0 5px rgba(0,0,0,.15), 0 0 3px rgba(255,255,255,.75) inset;</p>
+<p>/*border:1px solid rgba(255,255,255,.1);*/</p>
+<p>}</p>
+<p>.count{</p>
+<p>width:100%;</p>
+<p>color:#fff;</p>
+<p>height:100%;</p>
+<p>padding:100px;</p>
+<p>font-size:55px;</p>
+<p>font-weight:500;</p>
+<p>line-height:50px;</p>
+<p>position:absolute;</p>
+<p>text-align:center;</p>
+<p>}</p>
+<p>.count:after{</p>
+<p>width:100%;</p>
+<p>display:block;</p>
+<p>font-size:20px;</p>
+<p>font-weight:300;</p>
+<p>line-height:18px;</p>
+<p>text-align:center;</p>
+<p>position:relative;</p>
+<p>}</p>
+<p>.count.sec:after{content:‘sec’}</p>
+<p>.count.min:after{content:‘min’}</p>
+<p>.action{</p>
+<p>margin:auto;</p>
+<p>max-width:200px;</p>
+<p>}</p>
+<p>.action .input{</p>
+<p>margin-top:30px;</p>
+<p>position:relative;</p>
+<p>}</p>
+<p>.action .input-num{</p>
+<p>width:100%;</p>
+<p>border:none;</p>
+<p>padding:12px;</p>
+<p>border-radius:60px;</p>
+<p>}</p>
+<p>.action .input-btn{</p>
+<p>top:0;</p>
+<p>right:0;</p>
+<p>color:#fff;</p>
+<p>border:none;</p>
+<p>border:none;</p>
+<p>padding:12px;</p>
+<p>position:absolute;</p>
+<p>border-radius:60px;</p>
+<p>background-color:#39A2DB;</p>
+<p>text-transform:uppercase;</p>
+<p>}</p>
+<p>.tbl{display:table;width:100%}</p>
+<p>.tbl .col{display:table-cell}</p>
+<p>&lt;/style&gt;</p>
+<p>&lt;/head&gt;</p>
+<p>&lt;body&gt;</p>
+<p>&lt;!-- partial:index.partial.html --&gt;</p>
+<p>&lt;div class=“clock-wrap”&gt;</p>
+<p>&lt;div class=“clock pro-0”&gt;</p>
+<p>&lt;span class=“count”&gt;0&lt;/span&gt;</p>
+<p>&lt;/div&gt;</p>
+<p>&lt;/div&gt;</p>
+<p>&lt;div class=“action”&gt;</p>
+<p>&lt;div class=“input”&gt;</p>
+<p>&lt;input class=“input-num” type=“number” min=“1” placeholder=“Enter Minute”&gt;&lt;input data-action=“start” class=“input-btn” type=“button” value=“Start”&gt;</p>
+<p>&lt;/div&gt;</p>
+<p>&lt;/div&gt;</p>
+<p>&lt;!-- partial --&gt;</p>
 </div>
-<div class="action">
-	<div class="input">
-		<input class="input-num" type="number" min="1" placeholder="Enter Minute"><input data-action="start" class="input-btn" type="button" value="Start">
-	</div>
-</div>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-  <script>
-	$step = 1;
-$loops = Math.round(100 / $step);
-$increment = 360 / $loops;
-$half = Math.round($loops / 2);
-$barColor = '#39A2DB';
-$backColor = '#A2DBFA';
-
-$(function(){
-	clock.init();
-});
-clock={
-	interval:null,
-	init:function(){
-		$('.input-btn').click(function(){
-			switch($(this).data('action')){
-				case'start':
-					clock.stop();
-					clock.start($('.input-num').val());
-				break;
-				case'stop':
-					clock.stop();
-				break;
-			}
-		});
-	},
-	start:function(t){
-		var pie = 0;
-		var num = 0;
-		var min = t?t:1;
-		var sec = min*60;
-		var lop = sec;
-		$('.count').text(min);
-		if(min>0){
-			$('.count').addClass('min')
-		}else{
-			$('.count').addClass('sec')
-		}
-		clock.interval = setInterval(function(){
-			sec = sec-1;
-			if(min>1){
-				pie = pie+(100/(lop/min));
-			}else{
-				pie = pie+(100/(lop));
-			}
-			if(pie>=101){ pie = 1; }
-			num = (sec/60).toFixed(2).slice(0,-3);
-			if(num==0){
-				$('.count').removeClass('min').addClass('sec').text(sec);
-			}else{
-				$('.count').removeClass('sec').addClass('min').text(num);
-			}
-			//$('.clock').attr('class','clock pro-'+pie.toFixed(2).slice(0,-3));
-			//console.log(pie+'__'+sec);
-			$i = (pie.toFixed(2).slice(0,-3))-1;
-			if($i < $half){
-				$nextdeg = (90 + ( $increment * $i ))+'deg';
-				$('.clock').css({'background-image':'linear-gradient(90deg,'+$backColor+' 50%,transparent 50%,transparent),linear-gradient('+$nextdeg+','+$barColor+' 50%,'+$backColor+' 50%,'+$backColor+')'});
-			}else{
-				$nextdeg = (-90 + ( $increment * ( $i - $half ) ))+'deg';
-				$('.clock').css({'background-image':'linear-gradient('+$nextdeg+','+$barColor+' 50%,transparent 50%,transparent),linear-gradient(270deg,'+$barColor+' 50%,'+$backColor+' 50%,'+$backColor+')'});
-			}
-			if(sec==0){
-				clearInterval(clock.interval);
-				$('.count').text(0);
-				//$('.clock').removeAttr('class','clock pro-100');
-				$('.clock').removeAttr('style');
-			}
-		},1000);
-	},
-	stop:function(){
-		clearInterval(clock.interval);
-		$('.count').text(0);
-		$('.clock').removeAttr('style');
-	}
-}
-  </script>
-  <div class="note">DouYin:不喜欢编程的动画师不是好Ph.D</div>
-</body>
-
+      </article>
+    </div>
+  </body>
 </html>
