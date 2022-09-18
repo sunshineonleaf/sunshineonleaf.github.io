@@ -4,7 +4,7 @@
         <title></title>
         <link>undefined</link>
         <description>undefined</description>
-        <lastBuildDate>Sun, 18 Sep 2022 11:49:57 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 18 Sep 2022 11:56:11 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Joplin Pages Publisher</generator>
         <item>
@@ -171,7 +171,7 @@
 <h3 id="无心科研的时候多看文献">无心科研的时候多看文献。</h3>
 </li>
 <li>
-<h3 id="无聊的时候学学编程">无聊的时候学学编程。</h3>
+<h3 id="无聊的时候学学编程"><a title="https://trinket.io/turtle" href="https://trinket.io/turtle">无聊的时候学学编程。</a></h3>
 </li>
 </ul>
 <div><pre class="hljs"><code><span class="hljs-comment"># -*- coding: utf-8 -*-</span>
