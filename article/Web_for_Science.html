@@ -1,6 +1,50 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <style>
+  .search101 {
+width: 650px;
+margin: 300px auto;
+font-size: 0;
+}
+.sou1 {
+width: 514px;
+height: 40px;
+color: #666;
+font: 16px Microsoft YaHei;
+border: 1px solid rgba(170,170,170,.9);
+border-right: 0;
+border-radius: 2px 0 0 2px;
+background: rgba(255,255,255,.9);
+padding: 0 30px 0 3px;
+vertical-align: top;
+display: inline-block;
+transition: .2s;
+}
+.sou2 {
+width: 100px;
+height: 42px;
+font: 16px Microsoft YaHei;
+color: rgba(255,255,255,.9);
+background: rgba(0,170,240,1);
+border: 0;
+border-left: 1px solid rgba(0,170,240,1);
+border-radius: 0 2px 2px 0;
+margin: 0 0 0 -1px;
+vertical-align: top;
+transition: .3s;
+display: inline-block;
+cursor: pointer;
+}
+.sou2:hover {
+background: rgba(0,140,220,.9);
+}
+.sou1:focus {
+color: #333;
+border: 1px solid rgba(0,170,240,1);
+border-right: none;
+}
+</style>
   <script>
 var _hmt = _hmt || [];
 (function() {
@@ -43,10 +87,11 @@ var _hmt = _hmt || [];
         </header>
 	<form action="https://www.baidu.com/baidu" target="_blank">
 	<div align="left">
-	<input type=text name=word size=40>
-	<input type="submit" value="百度搜索">
+	<input type="text" id="sou1" class="sou1" name="word" maxlength="8048" value="" placeholder="" baiduSug=1 onmouseover="focus()" size=40>
+	<input type="submit" class="sou2" value="百度搜索">
 	</div>
 	</form>
+	<img src="https://i.ibb.co/vk352LK/tsp37-kej1k.webp" />
         <div class="article-content markdown-body"><h2 id="一-搜索mag"><strong>一、搜索</strong>🔍</h2>
 <ol>
 <li>
