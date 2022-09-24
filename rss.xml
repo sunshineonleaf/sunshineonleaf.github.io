@@ -4,7 +4,7 @@
         <title></title>
         <link>undefined</link>
         <description>undefined</description>
-        <lastBuildDate>Sat, 24 Sep 2022 21:27:50 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 24 Sep 2022 21:53:09 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Joplin Pages Publisher</generator>
         <item>
@@ -75,26 +75,8 @@
 <h3 id="无聊的时候学学编程"><a title="https://trinket.io/turtle" href="https://trinket.io/turtle">无聊的时候学学编程。</a></h3>
 </li>
 </ul>
-<div><pre class="hljs"><code><span class="hljs-comment"># -*- coding: utf-8 -*-</span>
-<span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
-<span class="hljs-keyword">def</span> <span class="hljs-title function_">curvemove</span>():
-    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">200</span>):
-        right(<span class="hljs-number">1</span>)
-        forward(<span class="hljs-number">1</span>)
-color(<span class="hljs-string">'red'</span>,<span class="hljs-string">'pink'</span>)        
-begin_fill()
-left(<span class="hljs-number">140</span>)
-forward(<span class="hljs-number">111.65</span>)
-curvemove()
-left(<span class="hljs-number">120</span>)
-curvemove()
-forward(<span class="hljs-number">111.65</span>)
-end_fill()
-done()</code></pre></div>
-<hr />
 <blockquote>
-<p><img src="/_resources/35c894f160d3471d9b1cf9d4269723bb.png" /></p>
-</blockquote>
+<img src="/_resources/8f0fd764f8044e82b766c7becc4d0d3a.png" alt="DSC_2130.png" width="660" height="407" class="jop-noMdConv" /></blockquote>
 ]]></content:encoded>
         </item>
         <item>
