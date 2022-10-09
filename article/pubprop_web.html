@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <style>
+  .search101 {
+width: 650px;
+margin: 300px auto;
+font-size: 0;
+}
+.sou1 {
+width: 400px;
+height: 40px;
+color: #666;
+font: 16px Microsoft YaHei;
+border: 1px solid rgba(170,170,170,.9);
+border-right: 0;
+border-radius: 2px 0 0 2px;
+background: rgba(255,255,255,.9);
+padding: 0 30px 0 3px;
+vertical-align: top;
+display: inline-block;
+transition: .2s;
+}
+.sou2 {
+width: 100px;
+height: 42px;
+font: 16px Microsoft YaHei;
+color: rgba(255,255,255,.9);
+background: rgba(0,170,240,1);
+border: 0;
+border-left: 1px solid rgba(0,170,240,1);
+border-radius: 0 2px 2px 0;
+margin: 0 0 0 -1px;
+vertical-align: top;
+transition: .3s;
+display: inline-block;
+cursor: pointer;
+}
+.sou2:hover {
+background: rgba(0,140,220,.9);
+}
+.sou1:focus {
+color: #333;
+border: 1px solid rgba(0,170,240,1);
+border-right: none;
+}
+</style>
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?a6c9f1dbdc55c8bfd2be4395deaea5a5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="/_assets/main.css" />
+
+    <title>Pubprop_web需求文档 - Taotao.top</title>
+  <link rel="stylesheet" href="/_markdown_plugin_assets/highlight.js/atom-one-light.css" /></head>
+  <body>
+    <div class="main">
+      <nav class="navigation">
+        <a href="/">Taotao.top</a>
+      </nav>
+      <article>
+        <header>
+          <h1 class="article-title">Pubprop_web需求文档 </h1> 
+          <div class="article-info">
+            <div>
+              <span
+                >Created At：<time datetime="1665322716143"
+                  >2022-10-09 15:38</time
+                ></span
+              >
+              <span
+                >Updated At：<time datetime="1665325890270"
+                  >2022-10-09 16:31</time
+                ></span
+              >
+            </div>
+            
+          </div>
+        </header>
+	<br />
+	<br />
+	<br />
+	<form action="https://searx.tiekoetter.com/search" target="_blank">
+	<div align="left">
+	<img src="https://i.ibb.co/vk352LK/tsp37-kej1k.webp" style="position:relative;left:0px;top:-27.5px;"/> <input id="ipt1" name="categories" type="hidden" value="general" > <input type="text" id="sou1" class="sou1" name="q" maxlength="8048" value="" placeholder="" baiduSug=1 onmouseover="focus()" size=40>
+	<input type="submit" class="sou2" value="元搜索">  
+	</div>
+	</form>
+        <div class="article-content markdown-body"><p>## 本程序的前缀：input代表需要用户输入，val代表计算后返回的数据，State代表中间过程</p>
+<p>##？代表可以进行选择，！代表仅在部分条件下可用</p>
+<p># 程序主要由状态、输入和输出共三部分依次组成</p>
+<p>0. 导入CoolProp数据库</p>
+<div><pre class="hljs"><code><span class="hljs-keyword">import</span> CoolProp
+<span class="hljs-keyword">import</span> CoolProp.CoolProp <span class="hljs-keyword">as</span> CP</code></pre></div>
+<p>1. 用户选择状态方程（默认为HEOS，即多参数Helmholtz）</p>
+<div><pre class="hljs"><code><span class="hljs-comment">## 状态</span>
+<span class="hljs-comment"># 状态.方程</span>
+<span class="hljs-attr">input_EOS</span> = <span class="hljs-string">'HEOS'</span> <span class="hljs-comment"># 可为HEOS、PR、SRK</span></code></pre></div>
+<p><img src="/_resources/3861169245f1450d9fcd60b47b46d74e.png" /></p>
+<p>2. 用户选择纯质或二元混合物（默认为纯质）</p>
+<p>2.1 选择纯质时，输入一个物质</p>
+<div><pre class="hljs"><code><span class="hljs-comment"># ？默认为纯质，可更改为混合物（仅在状态.方程为PR或SRK时可用）</span>
+<span class="hljs-comment"># 状态.纯质</span>
+<span class="hljs-attr">input_System</span> = <span class="hljs-string">'CO2'</span> <span class="hljs-comment">#详细信息及物质列表位于Data_substance.xlsx</span></code></pre></div>
+<p><img src="/_resources/c6a1a97de451435eaadf723865dc741f.png" /></p>
+<p>2.2 当1处状态方程为PR或SRK时，可选择二元混合物，此时需要输入两种物质、组分和交互系数kij</p>
+<div><pre class="hljs"><code><span class="hljs-comment"># 状态.混合物</span>
+<span class="hljs-attr">input_System</span> = <span class="hljs-string">'Heptane&amp;Octane'</span> <span class="hljs-comment">#混合物</span>
+<span class="hljs-attr">input_comp1</span> = <span class="hljs-number">0.9</span>
+<span class="hljs-attr">input_comp2</span> = <span class="hljs-number">1</span>-input_comp1 <span class="hljs-comment"># 不用输入，由1-组分1获得</span>
+<span class="hljs-attr">input_kij</span> = -<span class="hljs-number">0.05</span></code></pre></div>
+<p><img src="/_resources/921649f11aea4788b7bd86b235385c73.png" /></p>
+<p>3. 后台应用状态（通过以下代码自动进行）</p>
+<p>3.1 纯质</p>
+<div><pre class="hljs"><code><span class="hljs-comment"># 状态.纯质.应用</span>
+<span class="hljs-attr">State_input</span> = CoolProp.AbstractState(input_EOS,input_System)</code></pre></div>
+<p>3.2 二元混合物</p>
+<div><pre class="hljs"><code>State_input = CoolProp.<span class="hljs-constructor">AbstractState(<span class="hljs-params">input_EOS</span>,<span class="hljs-params">input_System</span>)</span>
+<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">State_input</span>.</span></span>set<span class="hljs-constructor">_mole_fractions([<span class="hljs-params">input_comp1</span>,<span class="hljs-params">input_comp2</span>])</span>
+<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">State_input</span>.</span></span>set<span class="hljs-constructor">_binary_interaction_double(0,1,<span class="hljs-string">"kij"</span>,<span class="hljs-params">input_kij</span>)</span></code></pre></div>
+<p>4. 用户输入物质状态（默认为任意状态，input_Q为0）</p>
+<div><pre class="hljs"><code><span class="hljs-comment">## 输入</span>
+<span class="hljs-attribute">input_Q</span> = <span class="hljs-number">0</span> # <span class="hljs-number">0</span>或<span class="hljs-number">1</span>（<span class="hljs-number">0</span>为液态，<span class="hljs-number">1</span>为气态）</code></pre></div>
+<p><img src="/_resources/2c9b36a6bde145289318a7668f9097ae.png" /></p>
+<p>5. 用户选择物性（默认勾选ρ、h、s、cp、cv和c），根据选择的物性，显示对应的表格。前两列固定为温度和压力，第三列开始为ρ（ρ和D表示的都是密度）等。</p>
+<p>5.1 仅在状态.方程为HEOS，状态.纯质，状态为任意状态时可选<img src="/_resources/35f7efb0d3d348df872b162f7c32abb6.png" /></p>
+<p>5.2 仅在状态.方程为HEOS，状态.纯质，状态为饱和液或饱和气时可选<img src="/_resources/75602589d140498fbb11e018bfb8f108.png" /></p>
+<p><img src="/_resources/44d8c82779964be5bcc3ebc6bf58db5a.png" /></p>
+<p><img src="/_resources/f5192a1496ac479f9a7c8aa5f20dadf2.png" /></p>
+<p>7. 用户在表格中输入数据</p>
+<p>7.1 当4处的状态为饱和气或饱和液时，用户只能输入T或P</p>
+<div><pre class="hljs"><code><span class="hljs-attr">input_T</span> = <span class="hljs-number">300</span> <span class="hljs-comment"># 温度，K</span>
+<span class="hljs-comment">#或者</span>
+<span class="hljs-attr">input_P</span> = <span class="hljs-number">2</span>*<span class="hljs-number">1</span>E6 <span class="hljs-comment"># 压力，单位为Pa，实际输入一般使用单位MPa，因此要在输入的基础上乘1E6</span></code></pre></div>
+<p>7.2 当4处的状态为任意状态时，用户可以输入T、P、D、h和s中的任意2个</p>
+<div><pre class="hljs"><code><span class="hljs-comment"># 以下任选2个</span>
+<span class="hljs-attr">input_T</span> = <span class="hljs-number">300</span> <span class="hljs-comment"># 温度，K</span>
+<span class="hljs-attr">input_D</span> = <span class="hljs-number">600</span> <span class="hljs-comment"># 密度，kg/m3</span>
+<span class="hljs-attr">input_h</span> = <span class="hljs-number">280000</span> <span class="hljs-comment"># 焓，J/Kg</span>
+<span class="hljs-attr">input_s</span> = <span class="hljs-number">1263</span> <span class="hljs-comment"># 熵，J/Kg-K</span></code></pre></div>
+<p>8. 后台应用状态</p>
+<p>8.1 当1为HEOS，4处的状态为任意状态时，根据7.2用户的选择六选一。比如用户输入T和D，那就选第2个。</p>
+<div><pre class="hljs"><code><span class="hljs-comment"># ？默认为双输入（一般状态），可更改为单输入（饱和状态），根据输入变量从以下选择对应的一个</span>
+<span class="hljs-comment"># 输入.双输入应用</span>
+<span class="hljs-comment">#！对于状态.混合物仅可使用PT_INPUTS，状态.方程为PR、SRK时仅可使用PT_INPUTS或DmassT_INPUTS</span>
+State_input.<span class="hljs-keyword">update</span>(CoolProp.PT_INPUTS, input_P, input_T)
+State_input.<span class="hljs-keyword">update</span>(CoolProp.DmassT_INPUTS, input_D, input_T)
+State_input.<span class="hljs-keyword">update</span>(CoolProp.DmassP_INPUTS, input_D, input_P)
+State_input.<span class="hljs-keyword">update</span>(CoolProp.HmassP_INPUTS, input_h, input_P)
+State_input.<span class="hljs-keyword">update</span>(CoolProp.PSmass_INPUTS, input_P, input_s)
+State_input.<span class="hljs-keyword">update</span>(CoolProp.SmassT_INPUTS, input_s, input_T)</code></pre></div>
+<p>8.2 当1为PR或SRK，2为纯质，4处的状态为任意状态时，根据7.2用户的选择二选一。比如用户输入T和P，那就选第1个</p>
+<div><pre class="hljs"><code>State_input<span class="hljs-selector-class">.update</span>(CoolProp<span class="hljs-selector-class">.PT_INPUTS</span>, input_P, input_T)
+State_input<span class="hljs-selector-class">.update</span>(CoolProp<span class="hljs-selector-class">.DmassT_INPUTS</span>, input_D, input_T)</code></pre></div>
+<p>8.3 当1为PR或SRK，2为二元混合物，4处的状态为任意状态时，用户只能选择输入T和P</p>
+<div><pre class="hljs"><code>State_input<span class="hljs-selector-class">.update</span>(CoolProp<span class="hljs-selector-class">.PT_INPUTS</span>, input_P, input_T)</code></pre></div>
+<p>8.4 当1为HEOS、PR或SRK，4处的状态为饱和气或饱和液时，根据7.1用户的选择二选一。比如用户输入T，那就选第1个。</p>
+<div><pre class="hljs"><code><span class="hljs-meta"># 输入.单输入应用（二选一）</span>
+State_input.update(CoolProp.QT_INPUTS, input_Q, input_T) <span class="hljs-meta"># 输入T</span>
+State_input.update(CoolProp.PQ_INPUTS, input_P, input_Q) <span class="hljs-meta"># 输入P</span></code></pre></div>
+<p>9. 内部计算基本性质</p>
+<p>9.1 纯质，共4个量</p>
+<div><pre class="hljs"><code><span class="hljs-comment">## 输出</span>
+<span class="hljs-comment"># 应用.基本性质（纯质）</span>
+<span class="hljs-attr">val_Tc</span> = CP.PropsSI(<span class="hljs-string">"Tcrit"</span>,input_System) <span class="hljs-comment"># 临界温度，K</span>
+<span class="hljs-attr">val_Pc</span> = CP.PropsSI(<span class="hljs-string">"Pcrit"</span>,input_System) <span class="hljs-comment"># 临界压力，Pa</span>
+<span class="hljs-attr">val_rhoc</span> = CP.PropsSI(<span class="hljs-string">"rhocrit"</span>,input_System) <span class="hljs-comment"># 临界密度，kg/m3</span>
+<span class="hljs-attr">val_molar</span> = State_input.molar_mass() <span class="hljs-comment"># 摩尔质量，kg/mol</span></code></pre></div>
+<p>9.2 二元混合物。共5个量</p>
+<div><pre class="hljs"><code><span class="hljs-comment"># 应用.临界性质（混合物）</span>
+<span class="hljs-attr">mat_cri</span> = State_input.all_critical_points()
+for pt <span class="hljs-keyword">in</span> mat_cri:
+    <span class="hljs-attr">val_Tc</span> = pt.T <span class="hljs-comment"># 临界温度，K</span>
+    <span class="hljs-attr">val_Pc</span> = pt.p <span class="hljs-comment"># 临界压力，Pa</span>
+    <span class="hljs-attr">val_rhoc</span> = pt.rhomolar*State_input.molar_mass() <span class="hljs-comment"># 临界密度，kg/m3</span>
+    <span class="hljs-attr">val_molar</span> = State_input.molar_mass() <span class="hljs-comment"># 摩尔质量，kg/mol</span>
+    <span class="hljs-attr">val_stable</span> = pt.stable <span class="hljs-comment"># 状态是否稳定</span></code></pre></div>
+<p>10. 内部计算一般性质</p>
+<div><pre class="hljs"><code><span class="hljs-attr">val_p</span> = State_input.p() <span class="hljs-comment"># 压力，Pa</span>
+<span class="hljs-attr">val_rhomass</span> = State_input.rhomass() <span class="hljs-comment"># 密度，kg/m3</span>
+<span class="hljs-attr">val_cp</span> = State_input.cpmass() <span class="hljs-comment"># 比定压热容，J/kg-K</span>
+<span class="hljs-attr">val_cv</span> = State_input.cvmass() <span class="hljs-comment"># 比定容热容，J/kg-K</span>
+<span class="hljs-attr">val_u</span> = State_input.speed_sound() <span class="hljs-comment"># 音速，m/s</span>
+<span class="hljs-attr">val_h</span> = State_input.hmass() <span class="hljs-comment"># 焓，J/Kg</span>
+<span class="hljs-attr">val_s</span> = State_input.smass() <span class="hljs-comment"># 熵，J/Kg-K</span>
+<span class="hljs-attr">val_kT</span> = State_input.isothermal_compressibility() <span class="hljs-comment"># 等温压缩系数，1/Pa</span>
+<span class="hljs-attr">val_ap</span> = State_input.isobaric_expansion_coefficient() <span class="hljs-comment"># 等压膨胀系数，1/K</span>
+<span class="hljs-attr">val_kS</span> = <span class="hljs-number">1</span>/val_rhomass/val_u**<span class="hljs-number">2</span> <span class="hljs-comment"># 绝热膨胀系数，1/Pa</span></code></pre></div>
+<div><pre class="hljs"><code><span class="hljs-comment"># 仅在状态.方程为HEOS，状态.纯质时可用</span>
+<span class="hljs-attr">val_vis</span> = State_input.viscosity()<span class="hljs-comment"># 粘度，Pa-s</span>
+<span class="hljs-attr">val_thercom</span> = State_input.conductivity() <span class="hljs-comment"># 导热系数，W/m-K</span></code></pre></div>
+<div><pre class="hljs"><code><span class="hljs-comment">#！仅在状态.方程为HEOS，输入.单输入应用时可用</span>
+<span class="hljs-attr">val_surten</span> = State_input.surface_tension() <span class="hljs-comment"># 表面张力，mN/m</span></code></pre></div>
+<p>11. 用户点击计算后在表格中显示结果</p>
+<p><img src="/_resources/25eea921397347c8b3f3eec513a1f8de.png" /></p>
+<p><img src="/_resources/28076545cd07406b87b4ef6e5c5653d2.png" /></p>
+</div>
+      </article>
+    </div>
+  </body>
+</html>
