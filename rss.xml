@@ -4,7 +4,7 @@
         <title></title>
         <link>undefined</link>
         <description>undefined</description>
-        <lastBuildDate>Mon, 31 Oct 2022 19:58:54 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 31 Oct 2022 20:20:12 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Joplin Pages Publisher</generator>
         <item>
@@ -12,6 +12,23 @@
             <guid>caff481e96894120b866a71f2a67e325</guid>
             <pubDate>Sat, 08 Oct 2022 19:20:50 GMT</pubDate>
             <content:encoded><![CDATA[<img src="/_resources/532150938cb64fcfa01220831ec34440.png" alt="82934a26bca4fe7960ac2b81c5022d4e.png" width="695" height="521" class="jop-noMdConv" />]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[科研速查测试]]></title>
+            <guid>3500dd5b788a44719f79421aa5f51eca</guid>
+            <pubDate>Sun, 18 Sep 2022 10:38:00 GMT</pubDate>
+            <content:encoded><![CDATA[<p><a title="https://github.com/sunshineonleaf/sunshineonleaf.github.io/blob/main/article/Web_for_Science.html" href="https://github.com/sunshineonleaf/sunshineonleaf.github.io/blob/main/article/Web_for_Science.html">目标程序</a></p>
+<div><pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript">
+<span class="hljs-keyword">var</span> _hmt = _hmt || [];
+(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">var</span> hm = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">"script"</span>);
+  hm.<span class="hljs-property">src</span> = <span class="hljs-string">"https://hm.baidu.com/hm.js?a6c9f1dbdc55c8bfd2be4395deaea5a5"</span>;
+  <span class="hljs-keyword">var</span> s = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementsByTagName</span>(<span class="hljs-string">"script"</span>)[<span class="hljs-number">0</span>]; 
+  s.<span class="hljs-property">parentNode</span>.<span class="hljs-title function_">insertBefore</span>(hm, s);
+})();
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre></div>
+<p><img src="/_resources/3e2b394af8f84cfaa4df77a17dc15bf6.webp" /></p>
+<img src="/_resources/64622a78a6064eee8ad344e334ca0201.gif" alt="21e.gif" width="169" height="56" class="jop-noMdConv" />]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[科研速查]]></title>
