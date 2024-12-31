@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>2023新年快乐！万事如意！</title>
+  <title>祝小郭2025新年快乐！万事如意！</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -1733,5 +1733,72 @@ const Spark = {
 
 init();
 </script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-79927007-1', 'auto');
+    ga('send', 'pageview');
+
+    onload = function() {
+    var click_cnt = 0;
+    var $html = document.getElementsByTagName("html")[0];
+    var $body = document.getElementsByTagName("body")[0];
+    var tem=1;
+    $html.onclick = function(e) {
+        var $elem = document.createElement("b");
+        $elem.style.color = "#F5ADA3";
+        $elem.style.zIndex = 9999;
+        $elem.style.position = "absolute";
+        $elem.style.select = "none";
+        var x = e.pageX;
+        var y = e.pageY;
+        $elem.style.left = (x - 10) + "px";
+        $elem.style.top = (y - 20) + "px";
+        clearInterval(anim);
+        
+
+var a=[
+  '2025新年快乐！(๑′ᴗ‵๑)Ｉ Lᵒᵛᵉᵧₒᵤ❤',
+  '祝小郭财源滚滚，幸福安康，早生贵子(*´∀ ˋ*)',
+  '在一起整整五年了，你的陪伴对我真的很重要'
+  ];
+  var b = [ '小郭要永远快乐快乐快乐！(づ￣3￣)づ╭❤～',
+  '我们越来越好，有车有房有宝宝\(^o^)/~',
+  '结婚一年多啦，我会好好努力，给你一个更加温暖的家'
+ ]
+ 
+        var len=a.length;
+        
+        if(tem===1)
+        {
+          click_cnt=Math.floor(Math.random()*(len+1));
+          $elem.innerText = a[click_cnt%len];
+          tem=0;
+        }
+        else
+        {
+          $elem.innerText = b[click_cnt%len];
+          tem=1;
+        }
+        
+        $elem.style.fontSize = 22 + "px";
+        var increase = 0;
+        var anim;
+        setTimeout(function() {
+            anim = setInterval(function() {
+                if (++increase == 800) {
+                    clearInterval(anim);
+                    $body.removeChild($elem);
+                }
+                $elem.style.top = y - 20 - increase + "px";
+                $elem.style.opacity = (800 - increase) / 500;
+            }, 8);
+        }, 70);
+        $body.appendChild($elem);
+    };
+};
+    </script>
 </body>
 </html>
